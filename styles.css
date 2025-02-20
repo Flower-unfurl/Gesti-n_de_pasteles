@@ -1,0 +1,389 @@
+body,
+h1,
+h2,
+h3,
+p,
+a,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+}
+
+/* Hiệu ứng nảy lên nảy xuống */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.top-bar {
+  background-color: #f884de;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: monospace;
+  color: rgb(95, 0, 203);
+}
+
+.logo:hover {
+  animation: bounce 1s infinite;
+}
+
+nav a {
+  color: rgb(147, 51, 250);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav a:hover {
+  color: rgb(68, 0, 255);
+  font-weight: bold;
+}
+
+.icons .icon {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Slideshow */
+.slideshow {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Chiều cao cố định */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 152, 152);
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Chia đều khoảng cách giữa chữ và hình ảnh */
+  opacity: 0; /* Ẩn slide ban đầu */
+  transition: opacity 0.8s ease; /* Hiệu ứng chuyển slide */
+}
+
+.slide.active {
+  opacity: 1; /* Hiển thị slide hiện tại */
+}
+
+.slideshow img {
+  width: 600px; /* Kích thước cố định */
+  height: 350px;
+  object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+
+.slideshow .info {
+  max-width: 40%; /* Giới hạn chiều rộng của phần chữ */
+  text-align: left; /* Căn trái phần chữ */
+  color: rgb(62, 2, 2); /* Màu chữ */
+}
+
+.slide .info p {
+  font-size: 30px; /* Kích thước chữ */
+  margin: 0 0 10px 0; /* Khoảng cách giữa các dòng */
+}
+
+.slideshow h2 {
+  font-size: 60px;
+  /* margin: 0; */
+  margin: 0 0 20px 0;
+}
+
+.slideshow button {
+  background-color: rgb(255, 0, 0); /* Màu nền nút */
+  color: white; /* Màu chữ nút */
+  padding: 10px 20px; /* Kích thước nút */
+  font-size: 26px; /* Kích thước chữ nút */
+  cursor: pointer; /* Con trỏ khi hover */
+  border-radius: 5px; /* Bo góc nút */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Đổ bóng nút */
+  border: none; /* Xóa viền */
+  transition: background-color 0s ease; /* Hiệu ứng hover */
+}
+
+/* Nút bấm chuyển slide */
+.slideshow .prev-btn,
+.slideshow .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền */
+  color: white; /* Màu chữ */
+  border: none;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%; /* Bo tròn nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.slideshow .prev-btn:hover,
+.slideshow .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Màu nền khi hover */
+}
+
+.slideshow .prev-btn {
+  left: 20px; /* Vị trí bên trái */
+}
+
+.slideshow .next-btn {
+  right: 20px; /* Vị trí bên phải */
+}
+
+.slide .info button:hover {
+  background-color: darkred; /* Màu nền khi hover */
+}
+
+/* Shop Section */
+#shop {
+  padding: 20px;
+  text-align: center;
+  background-color: #f6dfbb; /* Thêm màu nền nhạt */
+  margin-top: 40px;
+}
+
+.categories,
+.products {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgb(255, 180, 143); /* Nền trắng cho từng phần */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  /*tạo viền màu hồng*/
+  border: 5px solid rgb(253, 103, 10);
+}
+
+.categories h2,
+.products h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  /*in đậm*/
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid #ff5202; /* Đường kẻ ngang mỏng */
+  margin: 10px 0;
+}
+
+.view-all {
+  display: block;
+  text-align: right;
+  margin: 10px 0;
+  color: rgb(0, 0, 0); /* Màu chữ đen */
+  text-decoration: none;
+  font-size: 20px;
+  /*in đậm*/
+  font-weight: bold;
+}
+
+.view-all:hover {
+  text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.category-images,
+.product-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.category-item,
+.product {
+  text-align: center;
+  margin: 10px;
+  width: 150px; /* Cố định kích thước */
+  background-color: rgb(247, 240, 191); /* Nền trắng */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+  overflow: hidden; /* Ẩn phần vượt quá */
+}
+
+.category-item:hover,
+.product:hover {
+  transform: translateY(-20px); /* Nổi lên khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng đậm hơn khi hover */
+}
+
+.category-item img,
+.product img {
+  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
+  height: 150px; /* Cố định chiều cao */
+  border-radius: 10px; /* Bo góc hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung */
+  transition: transform 0.3s ease; /* Hiệu ứng phóng to */
+}
+
+.category-item p,
+.product p {
+  margin-top: 10px 0;
+  font-size: 16px;
+  color: #555; /* Màu chữ nhạt hơn */
+  padding: 0 10px; /* Thêm padding cho văn bản */
+}
+
+/* .category-item img:hover,
+.product img:hover {
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+
+.category-item p {
+  font-weight: bold; /* In đậm cho danh mục */
+}
+
+.product p {
+  color: rgb(0, 0, 0); /* Màu đỏ cho giá sản phẩm */
+  font-weight: bold;
+}
+
+/* Điều chỉnh khoảng cách giữa các phần */
+#shop > div {
+  margin-bottom: 40px;
+}
+
+/* About Us Section */
+#about {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(255, 152, 152); /* Nền trắng */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.about-content img {
+  width: 400px; /* Kích thước hình ảnh */
+  height: 300px;
+  border-radius: 10px; /* Bo góc hình ảnh */
+  margin-right: 20px;
+  object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung */
+}
+
+.about-content .text {
+  max-width: 600px; /* Giới hạn chiều rộng */
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 30px; /* Kích thước tiêu đề */
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 20px; /* Kích thước văn bản */
+  color: #555; /* Màu chữ nhạt hơn */
+  line-height: 1.6; /* Khoảng cách dòng */
+  margin-bottom: 20px;
+  overflow: hidden; /* Ẩn phần văn bản vượt quá */
+  transition: max-height 0.5s ease; /* Hiệu ứng mượt khi mở rộng */
+}
+.about-content p.truncate {
+  max-height: 100px; /* Giới hạn chiều cao ban đầu */
+}
+
+.about-content p.expanded {
+  max-height: 1000px; /* Chiều cao tối đa khi mở rộng */
+}
+
+.about-content button {
+  background-color: red; /* Màu nền nút */
+  color: white; /* Màu chữ nút */
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px; /* Bo góc nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.about-content button:hover {
+  background-color: darkred; /* Màu nền khi hover */
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f884de;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+
+.quick-links,
+.social-media {
+  text-align: left;
+}
+
+.quick-links h3,
+.social-media h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.quick-links a,
+.social-media a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.quick-links a:hover,
+.social-media a:hover {
+  color: rgb(68, 0, 255);
+  font-weight: bold;
+}

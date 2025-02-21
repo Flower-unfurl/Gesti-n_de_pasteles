@@ -139,7 +139,8 @@ nav a:hover {
   border-radius: 5px; /* Bo góc nút */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Đổ bóng nút */
   border: none; /* Xóa viền */
-  transition: background-color 0s ease; /* Hiệu ứng hover */
+  /* Hiệu ứng hover */
+  transition: background-color 0.3s ease;
 }
 
 /* Nút bấm chuyển slide */
@@ -155,7 +156,7 @@ nav a:hover {
   font-size: 24px;
   cursor: pointer;
   border-radius: 50%; /* Bo tròn nút */
-  transition: background-color 0.3s ease; /* Hiệu ứng hover */
+  transition: background-color 0s ease; /* Hiệu ứng hover */
 }
 
 .slideshow .prev-btn:hover,

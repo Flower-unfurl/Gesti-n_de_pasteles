@@ -6,7 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // const scrollUpArrows = document.querySelectorAll(".scroll-up .arrow");
   const readMoreBtn = document.getElementById("read-more-btn");
   const textParagraph = document.querySelector(".about-content p");
+  const viewAllButtons = document.querySelectorAll(".view-all");
   let currentSlide = 0;
+
+  viewAllButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+
+      const container = button.closest(".categories, .products");
+      const itemsContainer = container.querySelector(
+        ".category-images, .product-grid"
+      );
+
+      // Thêm lớp "show-all" để hiển thị tất cả các mục
+      itemsContainer.classList.toggle("show-all");
+
+      // Đổi văn bản nút "View all" thành "View less" và ngược lại
+      if (itemsContainer.classList.contains("show-all")) {
+        button.textContent = "View less <<";
+      } else {
+        button.textContent = "View all >>";
+      }
+    });
+  });
 
   // scrollDownArrows.forEach((arrow) => {
   //   arrow.addEventListener("click", function () {

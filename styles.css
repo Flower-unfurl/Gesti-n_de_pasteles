@@ -223,6 +223,17 @@ hr {
   text-decoration: underline; /* Gạch chân khi hover */
 }
 
+.category-item.hidden,
+.product.hidden {
+  display: none;
+}
+
+/* Hiển thị tất cả các mục khi bấm "View all" */
+.category-images.show-all .category-item,
+.product-grid.show-all .product {
+  display: block; /* Hoặc display: flex tùy thuộc vào layout của bạn */
+}
+
 .category-images,
 .product-grid {
   display: flex;
@@ -235,7 +246,7 @@ hr {
 .product {
   text-align: center;
   margin: 10px;
-  width: 140px; /* Cố định kích thước */
+  width: 220px; /* Cố định kích thước */
   background-color: rgb(247, 240, 191); /* Nền trắng */
   border-radius: 10px; /* Bo góc */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
@@ -252,7 +263,7 @@ hr {
 .category-item img,
 .product img {
   width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
-  height: 120px; /* Cố định chiều cao */
+  height: 200px; /* Cố định chiều cao */
   border-radius: 10px; /* Bo góc hình ảnh */
   object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung */
   transition: transform 0.3s ease; /* Hiệu ứng phóng to */
@@ -266,10 +277,6 @@ hr {
   padding: 0 10px; /* Thêm padding cho văn bản */
 }
 
-/* .category-item img:hover,
-.product img:hover {
-  transform: scale(1.05); /* Phóng to nhẹ khi hover */
-
 .category-item p {
   font-weight: bold; /* In đậm cho danh mục */
 }
@@ -278,6 +285,8 @@ hr {
   color: rgb(0, 0, 0); /* Màu đỏ cho giá sản phẩm */
   font-weight: bold;
 }
+
+/* Ẩn các mục vượt quá giới hạn */
 
 /* Điều chỉnh khoảng cách giữa các phần */
 #shop > div {

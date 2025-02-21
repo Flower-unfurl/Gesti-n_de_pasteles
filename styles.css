@@ -235,7 +235,7 @@ hr {
 .product {
   text-align: center;
   margin: 10px;
-  width: 150px; /* Cố định kích thước */
+  width: 140px; /* Cố định kích thước */
   background-color: rgb(247, 240, 191); /* Nền trắng */
   border-radius: 10px; /* Bo góc */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
@@ -252,7 +252,7 @@ hr {
 .category-item img,
 .product img {
   width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
-  height: 150px; /* Cố định chiều cao */
+  height: 120px; /* Cố định chiều cao */
   border-radius: 10px; /* Bo góc hình ảnh */
   object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung */
   transition: transform 0.3s ease; /* Hiệu ứng phóng to */

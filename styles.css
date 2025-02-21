@@ -14,14 +14,19 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.6;
+  padding-top: 100px; /* Thêm khoảng cách để tránh bị che bởi header */
 }
 
 /* Header */
 header {
   text-align: center;
+  position: fixed; /* Thêm thuộc tính này */
+  top: 0; /* Đặt vị trí trên cùng */
+  width: 100%; /* Chiều rộng 100% */
+  z-index: 1000; /* Đảm bảo header nằm trên các thành phần khác */
 }
 
-/* Hiệu ứng nảy lên nảy xuống */
+/* Hiệu ứng nảy lên nảy xuống  */
 @keyframes bounce {
   0%,
   20%,
@@ -43,8 +48,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  color: white;
+  padding: 10px 40px;
+  /* color: white; */
 }
 
 .logo {
@@ -143,6 +148,10 @@ nav a:hover {
   transition: background-color 0.3s ease;
 }
 
+.slideshow button:hover {
+  background-color: darkred; /* Màu nền khi hover */
+}
+
 /* Nút bấm chuyển slide */
 .slideshow .prev-btn,
 .slideshow .next-btn {
@@ -170,10 +179,6 @@ nav a:hover {
 
 .slideshow .next-btn {
   right: 20px; /* Vị trí bên phải */
-}
-
-.slide .info button:hover {
-  background-color: darkred; /* Màu nền khi hover */
 }
 
 /* Shop Section */

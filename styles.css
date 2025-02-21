@@ -246,7 +246,7 @@ hr {
 .product {
   text-align: center;
   margin: 10px;
-  width: 220px; /* Cố định kích thước */
+  width: 200px; /* Cố định kích thước */
   background-color: rgb(247, 240, 191); /* Nền trắng */
   border-radius: 10px; /* Bo góc */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */

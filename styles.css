@@ -26,6 +26,11 @@ header {
   z-index: 1000; /* Đảm bảo header nằm trên các thành phần khác */
 }
 
+section {
+  padding-top: 100px; /* Thêm khoảng cách để tránh bị che bởi header */
+  margin-top: -100px; /* Điều chỉnh vị trí để tránh khoảng trống */
+}
+
 /* Hiệu ứng nảy lên nảy xuống  */
 @keyframes bounce {
   0%,

@@ -296,11 +296,9 @@ hr {
   font-weight: bold;
 }
 
-/* Ẩn các mục vượt quá giới hạn */
-
 /* Điều chỉnh khoảng cách giữa các phần */
 #shop > div {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 /* About Us Section */
